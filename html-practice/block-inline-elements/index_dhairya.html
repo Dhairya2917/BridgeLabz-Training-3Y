@@ -1,0 +1,1093 @@
+<!-- 1. Create a multi-section resume page using only HTML. -->
+ <!DOCTYPE html>
+<html lang="en">c
+<head>
+    <title>My Resume</title>
+</head>
+<body>
+
+    <header>
+        <h1>Dhairya Goswami</h1>
+        <p>Email: goswamidhairya29@gmail.com</p>
+        <p>Phone: 9520662569</p>
+        <p>Location: Agra, Uttar Pradesh</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a> |
+        <a href="#skills">Skills</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#education">Education</a>
+    </nav>
+
+    <main>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a B.Tech Computer Science student interested in web development
+                and programming. I enjoy learning new technologies and improving my
+                coding skills by working on different projects.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>Problem Solving</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <ol>
+                <li>Personal Portfolio Website</li>
+                <li>Student Management System</li>
+                <li>Simple Calculator</li>
+            </ol>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+
+            <table border="1">
+                <tr>
+                    <th>Course</th>
+                    <th>Institute</th>
+                    <th>Year</th>
+                </tr>
+                <tr>
+                    <td>B.Tech Computer Science</td>
+                    <td>GLA University</td>
+                    <td>2026</td>
+                </tr>
+                <tr>
+                    <td>Class 12</td>
+                    <td>ABC Public School</td>
+                    <td>2022</td>
+                </tr>
+                <tr>
+                    <td>Class 10</td>
+                    <td>ABC Public School</td>
+                    <td>2020</td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dhairya Goswami. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+<!-- 2. Build a Product Catalog page for an online store using only HTML: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Catalog</title>
+</head>
+<body>
+
+    <h1>Online Store Product Catalog</h1>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th colspan="5">Available Products</th>
+        </tr>
+
+        <tr>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Availability</th>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=150"
+                     alt="Laptop" width="120">
+            </td>
+            <td>Laptop</td>
+            <td>Powerful laptop suitable for study, office work and programming.</td>
+            <td>₹50,000</td>
+            <td rowspan="2">In Stock</td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=150"
+                     alt="Headphones" width="120">
+            </td>
+            <td>Headphones</td>
+            <td>Wireless headphones with clear sound and comfortable design.</td>
+            <td>₹2,000</td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=150"
+                     alt="Smart Watch" width="120">
+            </td>
+            <td>Smart Watch</td>
+            <td>Smart watch with fitness tracking and notification features.</td>
+            <td>₹3,500</td>
+            <td>Out of Stock</td>
+        </tr>
+
+        <tr>
+            <td>
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=150"
+                     alt="Sports Shoes" width="120">
+            </td>
+            <td>Sports Shoes</td>
+            <td>Comfortable sports shoes for running and daily activities.</td>
+            <td>₹2,500</td>
+            <td>In Stock</td>
+        </tr>
+
+        <tr>
+            <td colspan="3">
+                <strong>Special Offer</strong>
+            </td>
+            <td colspan="2">
+                10% Discount on selected products
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+<!-- 4. Create a Company Layout Page using only block-level elements: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Registration Form</title>
+</head>
+<body>
+
+    <h1>Course Registration Form</h1>
+
+    <form>
+
+        <fieldset>
+            <legend>Student Details</legend>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <br><br>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course">
+                <option value="">Select a Course</option>
+                <option value="web">Web Development</option>
+                <option value="java">Java Programming</option>
+                <option value="python">Python Programming</option>
+                <option value="dbms">Database Management</option>
+            </select>
+            <br><br>
+
+            <input type="submit" value="Register">
+
+        </fieldset>
+
+    </form>
+
+    <h2>Available Course Schedules</h2>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Instructor</th>
+        </tr>
+
+        <tr>
+            <td>Monday</td>
+            <td>10:00 AM - 11:00 AM</td>
+            <td>Mr. Amit Sharma</td>
+        </tr>
+
+        <tr>
+            <td>Tuesday</td>
+            <td>11:00 AM - 12:00 PM</td>
+            <td>Ms. Neha Singh</td>
+        </tr>
+
+        <tr>
+            <td>Wednesday</td>
+            <td>12:00 PM - 1:00 PM</td>
+            <td>Mr. Rahul Verma</td>
+        </tr>
+
+        <tr>
+            <td>Thursday</td>
+            <td>2:00 PM - 3:00 PM</td>
+            <td>Mr. Arjun Kumar</td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+<!-- 5. Create a Nested List Structure representing a “University → Departments → Courses →
+Topics” hierarchy. Use nested <ul> and <ol> lists properly to show multi-level structure. -->
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>University Departments and Courses</title>
+</head>
+<body>
+
+    <h1>University</h1>
+
+    <ul>
+        <li>Computer Science Department
+            <ol>
+                <li>Web Development
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </li>
+
+                <li>Programming
+                    <ul>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>C++</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+
+        <li>Mechanical Engineering Department
+            <ol>
+                <li>Thermodynamics
+                    <ul>
+                        <li>Heat and Temperature</li>
+                        <li>Laws of Thermodynamics</li>
+                    </ul>
+                </li>
+
+                <li>Manufacturing
+                    <ul>
+                        <li>Machining</li>
+                        <li>Welding</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+
+        <li>Electrical Engineering Department
+            <ol>
+                <li>Electrical Circuits
+                    <ul>
+                        <li>Ohm's Law</li>
+                        <li>Kirchhoff's Laws</li>
+                    </ul>
+                </li>
+
+                <li>Digital Electronics
+                    <ul>
+                        <li>Logic Gates</li>
+                        <li>Flip Flops</li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+    </ul>
+
+</body>
+</html>
+
+<!-- 6. Build a Restaurant Menu Page using: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spice Garden Restaurant</title>
+</head>
+<body>
+
+    <header>
+        <h1>Spice Garden Restaurant</h1>
+        <p>Delicious food with a homely taste</p>
+    </header>
+
+    <nav>
+        <a href="#starters">Starters</a> |
+        <a href="#maincourse">Main Course</a> |
+        <a href="#desserts">Desserts</a>
+    </nav>
+
+    <section id="starters">
+        <h2>Starters</h2>
+
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Dish Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Paneer Tikka</td>
+                <td>Grilled paneer with spices and vegetables.</td>
+                <td>₹180</td>
+            </tr>
+            <tr>
+                <td>Veg Spring Roll</td>
+                <td>Crispy rolls filled with fresh vegetables.</td>
+                <td>₹150</td>
+            </tr>
+            <tr>
+                <td>French Fries</td>
+                <td>Crispy golden potato fries.</td>
+                <td>₹120</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="maincourse">
+        <h2>Main Course</h2>
+
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Dish Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Paneer Butter Masala</td>
+                <td>Soft paneer cooked in a creamy tomato gravy.</td>
+                <td>₹250</td>
+            </tr>
+            <tr>
+                <td>Veg Biryani</td>
+                <td>Fragrant rice cooked with vegetables and spices.</td>
+                <td>₹220</td>
+            </tr>
+            <tr>
+                <td>Dal Tadka</td>
+                <td>Yellow dal prepared with Indian spices and tadka.</td>
+                <td>₹160</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="desserts">
+        <h2>Desserts</h2>
+
+        <table border="1" cellpadding="8">
+            <tr>
+                <th>Dish Name</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Gulab Jamun</td>
+                <td>Soft sweet dumplings served with sugar syrup.</td>
+                <td>₹100</td>
+            </tr>
+            <tr>
+                <td>Ice Cream</td>
+                <td>Cold and creamy vanilla ice cream.</td>
+                <td>₹90</td>
+            </tr>
+            <tr>
+                <td>Chocolate Brownie</td>
+                <td>Warm chocolate brownie with a rich chocolate taste.</td>
+                <td>₹140</td>
+            </tr>
+        </table>
+    </section>
+
+    <footer>
+        <p>Contact: 9520662569</p>
+        <p>Email: spicegarden@example.com</p>
+        <p>Address: Main Market, Agra, Uttar Pradesh</p>
+    </footer>
+
+</body>
+</html>
+
+<!-- 7. Design a Conference Schedule page using HTML tables and semantic tags.
+The table should have: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Conference Schedule</title>
+</head>
+<body>
+
+    <header>
+        <h1>Tech Conference 2026</h1>
+        <p>Conference Schedule</p>
+    </header>
+
+    <main>
+
+        <table border="1" cellpadding="8">
+            <thead>
+                <tr>
+                    <th>Session</th>
+                    <th>Time</th>
+                    <th>Topic</th>
+                    <th>Speaker</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td rowspan="2">Morning</td>
+                    <td>9:00 AM - 10:00 AM</td>
+                    <td>Future of Technology</td>
+                    <td>Mr. Amit Sharma</td>
+                </tr>
+
+                <tr>
+                    <td>10:15 AM - 11:15 AM</td>
+                    <td>Introduction to Artificial Intelligence</td>
+                    <td>Dr. Neha Singh</td>
+                </tr>
+
+                <tr>
+                    <td rowspan="2">Afternoon</td>
+                    <td>1:00 PM - 2:00 PM</td>
+                    <td>Web Development Trends</td>
+                    <td>Mr. Rahul Verma</td>
+                </tr>
+
+                <tr>
+                    <td>2:15 PM - 3:15 PM</td>
+                    <td>Cyber Security Basics</td>
+                    <td>Mr. Arjun Kumar</td>
+                </tr>
+
+                <tr>
+                    <td>Evening</td>
+                    <td>5:00 PM - 6:00 PM</td>
+                    <td>Closing Session</td>
+                    <td>Dr. Priya Sharma</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="4">Thank you for attending Tech Conference 2026</td>
+                </tr>
+            </tfoot>
+        </table>
+
+    </main>
+
+    <footer>
+        <p>Contact: techconference@example.com</p>
+    </footer>
+
+</body>
+</html>
+
+<!-- 8. Create a Student Report Page: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Report</title>
+</head>
+<body>
+
+    <h1>ABC Public School</h1>
+
+    <h2>Student Report Card</h2>
+
+    <table border="1" cellpadding="8">
+        <tr>
+            <th colspan="4" title="Student Information">Student Details</th>
+        </tr>
+
+        <tr>
+            <td rowspan="2" title="Student Name"><strong>Name</strong></td>
+            <td>Dhairya Goswami</td>
+            <td><strong>Class</strong></td>
+            <td>12th</td>
+        </tr>
+
+        <tr>
+            <td colspan="3">Roll Number: 25</td>
+        </tr>
+
+        <tr>
+            <th>Subject</th>
+            <th>Maximum Marks</th>
+            <th>Marks Obtained</th>
+            <th>Grade</th>
+        </tr>
+
+        <tr>
+            <td>English</td>
+            <td>100</td>
+            <td>82</td>
+            <td>A</td>
+        </tr>
+
+        <tr>
+            <td>Mathematics</td>
+            <td>100</td>
+            <td>88</td>
+            <td>A+</td>
+        </tr>
+
+        <tr>
+            <td>Physics</td>
+            <td>100</td>
+            <td>76</td>
+            <td>B+</td>
+        </tr>
+
+        <tr>
+            <td>Chemistry</td>
+            <td>100</td>
+            <td>81</td>
+            <td>A</td>
+        </tr>
+
+        <tr>
+            <td>Computer Science</td>
+            <td>100</td>
+            <td>91</td>
+            <td>A+</td>
+        </tr>
+
+        <tr>
+            <th colspan="2">Total</th>
+            <td colspan="2">418 / 500</td>
+        </tr>
+
+        <tr>
+            <th colspan="2">Percentage</th>
+            <td colspan="2">83.6%</td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+<!-- 9. Build a Travel Destination Page: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top 3 Travel Destinations</title>
+</head>
+<body>
+
+    <header>
+        <h1>Top 3 Travel Destinations</h1>
+    </header>
+
+    <main>
+
+        <article>
+            <h2>Manali</h2>
+
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=500"
+                 alt="Manali Mountains" width="300">
+
+            <p>
+                Manali is a beautiful hill station in Himachal Pradesh.
+                It is famous for its mountains, rivers, valleys and pleasant weather.
+            </p>
+
+            <blockquote>
+                "Manali is a perfect place to enjoy nature and spend peaceful time."
+            </blockquote>
+        </article>
+
+        <article>
+            <h2>Goa</h2>
+
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?w=500"
+                 alt="Goa Beach" width="300">
+
+            <p>
+                Goa is a popular tourist destination known for its beautiful beaches,
+                peaceful surroundings and enjoyable atmosphere.
+            </p>
+
+            <blockquote>
+                "Goa is a great place to relax, enjoy the beach and have fun."
+            </blockquote>
+        </article>
+
+        <article>
+            <h2>Jaipur</h2>
+
+            <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?w=500"
+                 alt="Jaipur Palace" width="300">
+
+            <p>
+                Jaipur is known as the Pink City of India. It is famous for its
+                forts, palaces, markets and rich history.
+            </p>
+
+            <blockquote>
+                "Jaipur is a beautiful city with amazing history and architecture."
+            </blockquote>
+        </article>
+
+    </main>
+
+    <aside>
+        <h2>Travel Tips</h2>
+
+        <ul>
+            <li>Carry important documents with you.</li>
+            <li>Check the weather before travelling.</li>
+            <li>Keep some cash for emergencies.</li>
+            <li>Respect local culture and places.</li>
+            <li>Keep your belongings safe.</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 Top Travel Destinations. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+<!-- 10. Create a Dropdown-based Selection Page: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel Selection Page</title>
+</head>
+<body>
+
+    <h1>Select Your Travel Destination</h1>
+
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+        <option value="india" selected>India</option>
+        <option value="nepal">Nepal</option>
+        <option value="thailand">Thailand</option>
+        <option value="australia">Australia</option>
+    </select>
+
+    <br><br>
+
+    <label for="state">State:</label>
+    <select id="state" name="state">
+        <option value="uttar-pradesh" selected>Uttar Pradesh</option>
+        <option value="rajasthan">Rajasthan</option>
+        <option value="himachal-pradesh">Himachal Pradesh</option>
+        <option value="goa">Goa</option>
+    </select>
+
+    <br><br>
+
+    <label for="city">City:</label>
+    <select id="city" name="city">
+        <option value="agra" selected>Agra</option>
+        <option value="jaipur">Jaipur</option>
+        <option value="manali">Manali</option>
+        <option value="goa">Goa</option>
+    </select>
+
+    <br><br>
+
+    <label for="place">Favorite Tourist Place:</label>
+    <select id="place" name="place">
+        <option value="taj-mahal" selected>Taj Mahal</option>
+        <option value="amer-fort">Amer Fort</option>
+        <option value="rohtang-pass">Rohtang Pass</option>
+        <option value="baga-beach">Baga Beach</option>
+    </select>
+
+    <p>
+        My selected travel destination is India, Uttar Pradesh, Agra,
+        and my favorite tourist place is the Taj Mahal.
+    </p>
+
+</body>
+</html>
+
+<!-- 11. Design a News Layout Page: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daily News</title>
+</head>
+<body>
+
+    <header>
+        <h1>Daily News</h1>
+    </header>
+
+    <nav>
+        <a href="#sports">Sports</a> |
+        <a href="#technology">Technology</a> |
+        <a href="#politics">Politics</a>
+    </nav>
+
+    <main>
+
+        <article id="sports">
+            <h2>India Wins an Exciting Cricket Match</h2>
+            <p>
+                Date:
+                <time datetime="2026-08-19">19 August 2026</time>
+            </p>
+            <p>
+                India won an exciting cricket match after a close contest.
+                The players performed well and helped the team secure a memorable victory.
+            </p>
+            <p>
+                Source:
+                <a href="https://www.espncricinfo.com" target="_blank">ESPN Cricinfo</a>
+            </p>
+        </article>
+
+        <article id="technology">
+            <h2>New Technology Makes Online Learning Easier</h2>
+            <p>
+                Date:
+                <time datetime="2026-08-18">18 August 2026</time>
+            </p>
+            <p>
+                New digital tools are helping students learn online more easily.
+                These technologies provide useful resources and make studying more convenient.
+            </p>
+            <p>
+                Source:
+                <a href="https://www.theverge.com" target="_blank">The Verge</a>
+            </p>
+        </article>
+
+        <article id="politics">
+            <h2>Government Announces New Development Plans</h2>
+            <p>
+                Date:
+                <time datetime="2026-08-17">17 August 2026</time>
+            </p>
+            <p>
+                The government has announced new plans focusing on development and
+                improving public services across different areas.
+            </p>
+            <p>
+                Source:
+                <a href="https://www.bbc.com/news" target="_blank">BBC News</a>
+            </p>
+        </article>
+
+    </main>
+
+    <aside>
+        <h2>Popular Topics</h2>
+
+        <ul>
+            <li>Cricket</li>
+            <li>Artificial Intelligence</li>
+            <li>Technology</li>
+            <li>Education</li>
+            <li>National News</li>
+        </ul>
+    </aside>
+
+    <footer>
+        <p>Contact: dailynews@example.com</p>
+        <p>&copy; 2026 Daily News. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+<!-- 12. Create a Quotation Showcase Page: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quotation Showcase</title>
+</head>
+<body>
+
+    <h1>Inspirational Quotes</h1>
+
+    <section>
+        <h2>Quote 1 - Success</h2>
+
+        <blockquote>
+            "Success is not final, failure is not fatal: it is the courage to continue that counts."
+        </blockquote>
+
+        <cite>Winston Churchill</cite>
+    </section>
+
+    <section>
+        <h2>Quote 2 - Life</h2>
+
+        <blockquote>
+            "The purpose of our lives is to be happy."
+        </blockquote>
+
+        <cite>Dalai Lama</cite>
+    </section>
+
+    <section>
+        <h2>Quote 3 - Dreams</h2>
+
+        <blockquote>
+            "The future belongs to those who believe in the beauty of their dreams."
+        </blockquote>
+
+        <cite>Eleanor Roosevelt</cite>
+    </section>
+
+    <p>
+        Quotes inspire people because they give us motivation, hope and positive
+        thoughts. A good quote can encourage us to work hard, stay confident and
+        keep moving forward even when things are difficult.
+    </p>
+
+</body>
+</html>
+
+<!-- 13. Build a Blog Layout Page using HTML5 semantic structure: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Blog</title>
+</head>
+<body>
+
+    <header>
+        <h1>My Personal Blog</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">Blogs</a> |
+        <a href="#">About</a>
+    </nav>
+
+    <main>
+
+        <article>
+            <h2>My First Blog</h2>
+
+            <time datetime="2026-08-19">19 August 2026</time>
+
+            <p>
+                Today I started writing my first blog. I learned how blogs are
+                created and how HTML can be used to organize the content of a webpage.
+                It was a simple but interesting experience.
+            </p>
+
+            <blockquote>
+                "Every expert was once a beginner."
+            </blockquote>
+        </article>
+
+        <article>
+            <h2>Things I Learned This Week</h2>
+
+            <time datetime="2026-08-19">19 August 2026</time>
+
+            <p>
+                This week I learned about HTML5 semantic tags, tables, forms and
+                different types of lists. Practicing these tags helped me understand
+                how a webpage is properly structured.
+            </p>
+
+            <blockquote>
+                "Learning never stops."
+            </blockquote>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Written by Dhairya Goswami</p>
+    </footer>
+
+</body>
+</html>
+<!-- 
+14. Create a Movie Database Page using a <table>: -->
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Database</title>
+</head>
+<body>
+
+    <h1>Movie Database</h1>
+
+    <table border="1" cellpadding="8">
+        <caption><strong>Popular Movies</strong></caption>
+
+        <tr>
+            <th colspan="5" title="Movie Information">Movie Details</th>
+        </tr>
+
+        <tr>
+            <th>Movie Name</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th>IMDB Rating</th>
+            <th>Link</th>
+        </tr>
+
+        <tr>
+            <td>3 Idiots</td>
+            <td>Comedy / Drama</td>
+            <td>2009</td>
+            <td>8.4</td>
+            <td>
+                <a href="https://www.imdb.com/title/tt1187043/" target="_blank">IMDB</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Taare Zameen Par</td>
+            <td>Drama</td>
+            <td>2007</td>
+            <td>8.3</td>
+            <td>
+                <a href="https://www.imdb.com/title/tt0986264/" target="_blank">IMDB</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Lagaan</td>
+            <td>Drama / Sports</td>
+            <td>2001</td>
+            <td>8.1</td>
+            <td>
+                <a href="https://www.imdb.com/title/tt0169102/" target="_blank">IMDB</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Chhichhore</td>
+            <td>Comedy / Drama</td>
+            <td>2019</td>
+            <td>8.3</td>
+            <td>
+                <a href="https://www.imdb.com/title/tt9052870/" target="_blank">IMDB</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="5">
+                <small>Note: IMDB ratings may change over time.</small>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
+
+<!-- 15. Build a Portfolio Layout Page using HTML only: -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+</head>
+<body>
+
+    <header>
+        <h1>Dhairya Goswami</h1>
+        <p>Web Developer</p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a> |
+        <a href="#skills">Skills</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+
+        <section id="about">
+            <h2>About Me</h2>
+
+            <p>
+                I am a B.Tech Computer Science student who is interested in
+                web development and programming. I enjoy learning new technologies
+                and creating simple and useful websites.
+            </p>
+
+            <blockquote>
+                "Success comes from hard work and continuous learning."
+            </blockquote>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java</li>
+                <li>Python</li>
+                <li>Problem Solving</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <ol>
+                <li>Personal Portfolio Website</li>
+                <li>Student Management System</li>
+                <li>Online Product Catalog</li>
+                <li>Simple Calculator</li>
+            </ol>
+        </section>
+
+    </main>
+
+    <aside id="contact">
+        <h2>Contact Info</h2>
+
+        <p>Email: goswamidhairya29@gmail.com</p>
+        <p>Phone: 9520662569</p>
+        <p>
+            LinkedIn:
+            <a href="https://www.linkedin.com" target="_blank">My LinkedIn Profile</a>
+        </p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 Dhairya Goswami. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
