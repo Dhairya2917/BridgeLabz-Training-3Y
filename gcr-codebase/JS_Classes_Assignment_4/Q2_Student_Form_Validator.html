@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 520px; margin: 30px auto; padding: 20px; }
+    label { display: block; margin-top: 12px; }
+    input { box-sizing: border-box; width: 100%; padding: 9px; border: 2px solid #aaa; border-radius: 4px; }
+    .valid { border-color: green; }
+    .invalid { border-color: red; }
+    .error { color: red; font-size: 13px; }
+    button { margin-top: 16px; padding: 10px 16px; cursor: pointer; }
+    #result { margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Student Registration</h1>
+  <form id="studentForm" novalidate>
+    <label for="name">Name</label><input id="name" autocomplete="name">
+    <div class="error" id="nameError"></div>
+    <label for="email">Email</label><input id="email" type="email" autocomplete="email">
+    <div class="error" id="emailError"></div>
+    <label for="phone">Phone</label><input id="phone" inputmode="numeric" autocomplete="tel">
+    <div class="error" id="phoneError"></div>
+    <label for="password">Password</label><input id="password" type="password" autocomplete="new-password">
+    <div class="error" id="passwordError"></div>
+    <button type="submit">Register</button>
+  </form>
+  <p id="result" aria-live="polite"></p>
+  <script>
+    const form = document.getElementById("studentForm");
+    const rules = {
+      name: { regex: /^[A-Za-z ]+$/, message: "Name must contain alphabets only." },
+      email: { regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, message: "Enter a valid email address." },
+      phone: { regex: /^\d{10}$/, message: "Phone number must be exactly 10 digits." },
+      password: { regex: /^(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).+$/, message: "Password needs an uppercase letter, a number, and a special character." }
+    };
+
+    function validateField(id) {
+      const input = document.getElementById(id);
+      const error = document.getElementById(id + "Error");
+      const valid = rules[id].regex.test(input.value.trim());
+      input.classList.toggle("valid", valid);
+      input.classList.toggle("invalid", !valid);
+      error.textContent = valid ? "" : rules[id].message;
+      return valid;
+    }
+
+    Object.keys(rules).forEach(id => {
+      document.getElementById(id).addEventListener("input", () => validateField(id));
+    });
+
+    form.addEventListener("submit", event => {
+      event.preventDefault();
+      const valid = Object.keys(rules).map(validateField).every(Boolean);
+      document.getElementById("result").textContent = valid
+        ? "Registration successful!"
+        : "Please correct the errors above.";
+    });
+  </script>
+</body>
+</html>

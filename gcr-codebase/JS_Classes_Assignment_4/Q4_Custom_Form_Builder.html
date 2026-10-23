@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Form Builder</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 520px; margin: 30px auto; padding: 20px; }
+    label { display: block; margin-top: 12px; }
+    input, select, textarea { width: 100%; box-sizing: border-box; padding: 9px; margin-top: 5px; }
+    button { margin-top: 16px; padding: 10px 16px; }
+    pre { background: #f3f3f3; padding: 12px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>Dynamic Form Builder</h1>
+  <div id="formContainer"></div>
+  <pre id="output" aria-live="polite"></pre>
+  <script>
+    class FormBuilder {
+      constructor(fields, container) {
+        this.fields = fields;
+        this.container = container;
+      }
+
+      render() {
+        const form = document.createElement("form");
+        form.id = "dynamicForm";
+
+        this.fields.forEach((field, index) => {
+          const label = document.createElement("label");
+          label.htmlFor = `field-${index}`;
+          label.textContent = field.label;
+
+          const input = document.createElement(field.type === "textarea" ? "textarea" : "input");
+          if (field.type !== "textarea") input.type = field.type;
+          input.id = `field-${index}`;
+          input.name = field.name;
+          input.required = Boolean(field.required);
+
+          form.append(label, input);
+        });
+
+        const button = document.createElement("button");
+        button.type = "submit";
+        button.textContent = "Submit";
+        form.appendChild(button);
+        form.addEventListener("submit", event => {
+          event.preventDefault();
+          document.getElementById("output").textContent =
+            JSON.stringify(this.getFormData(), null, 2);
+        });
+        this.container.replaceChildren(form);
+      }
+
+      getFormData() {
+        const formData = new FormData(this.container.querySelector("form"));
+        return Object.fromEntries(formData.entries());
+      }
+    }
+
+    const fields = [
+      { type: "text", label: "Username", name: "username", required: true },
+      { type: "email", label: "Email", name: "email", required: true },
+      { type: "password", label: "Password", name: "password", required: true }
+    ];
+    new FormBuilder(fields, document.getElementById("formContainer")).render();
+  </script>
+</body>
+</html>

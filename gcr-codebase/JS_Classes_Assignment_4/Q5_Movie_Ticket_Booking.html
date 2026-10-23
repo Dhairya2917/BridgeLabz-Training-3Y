@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Ticket Booking</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 520px; margin: 30px auto; padding: 20px; }
+    label { display: block; margin-top: 12px; }
+    input { width: 100%; box-sizing: border-box; padding: 9px; }
+    button { margin-top: 16px; padding: 10px 16px; }
+    .error { color: red; }
+    #ticket { margin-top: 18px; padding: 12px; background: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <h1>Movie Ticket Booking</h1>
+  <form id="bookingForm" novalidate>
+    <label for="name">Name</label><input id="name" required>
+    <label for="email">Email</label><input id="email" type="email" required>
+    <label for="seats">Seats (1–10)</label><input id="seats" type="number" min="1" max="10" step="1" required>
+    <button type="submit">Book Ticket</button>
+  </form>
+  <p id="message" class="error" aria-live="polite"></p>
+  <div id="ticket"></div>
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", event => {
+      event.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const seatsText = document.getElementById("seats").value;
+      const seats = Number(seatsText);
+      const nameValid = /^[A-Za-z ]+$/.test(name);
+      const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      const seatsValid = Number.isInteger(seats) && seats >= 1 && seats <= 10;
+      const errors = [];
+      if (!nameValid) errors.push("Name must contain alphabets and spaces only.");
+      if (!emailValid) errors.push("Enter a valid email address.");
+      if (!seatsValid) errors.push("Seats must be a whole number from 1 to 10.");
+
+      document.getElementById("message").textContent = errors.join(" ");
+      const ticket = document.getElementById("ticket");
+      if (errors.length) {
+        ticket.textContent = "";
+        return;
+      }
+
+      const booking = { name, email, seats };
+      ticket.textContent = `Booking confirmed! Name: ${booking.name} | Email: ${booking.email} | Seats: ${booking.seats}`;
+    });
+  </script>
+</body>
+</html>
